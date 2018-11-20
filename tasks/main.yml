@@ -1,0 +1,23 @@
+---
+# tasks file for install-docker
+
+- name: Incluindo variaveis especificas do SO
+  include_vars: "{{ item }}"
+  with_first_found:
+   - ../vars/{{ ansible_distribution | lower }}.yml
+   - ../vars/{{ ansible_os_family | lower }}.yml
+
+
+- include_tasks: "{{ item }}"
+  with_first_found:
+   - "{{ ansible_distribution | lower }}.yml"
+   - "{{ ansible_os_family | lower }}.yml"
+   - "os_defaults.yml"
+
+
+- name: Instalando o Docker Compose
+  when: os_default is not defined
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-Linux-{{ ansible_architecture }}"
+    dest: /usr/local/bin/docker-compose
+    mode: +x
