@@ -4,11 +4,15 @@
   yum: 
     name: "{{ dependencias }}"
     state: present
+  tags:
+    - deps
 
 - name: Adicionando o Repositorio do Docker
   get_url:
     url: https://download.docker.com/linux/centos/docker-ce.repo
     dest: /etc/yum.repos.d/docker-ce.repo
+  tags:
+    - repo
 
 - name: Instalando o Docker
   yum:
@@ -16,3 +20,5 @@
     state: present
   notify:
     - Start Docker
+  tags:
+    - docker

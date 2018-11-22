@@ -9,6 +9,16 @@ Distribuições Suportadas pela Role
 - Debian Jessie ou superior
 - RedHat ou CentOS
 
+
+Tags da Role 
+--------------
+
+- deps: Instala as dependências do Docker.
+- repo: Insere o repositório do Docker.
+- docker: Realiza a instalação do pacote do Docker.
+- compose: Realiza a instalação do Docker Compose.
+
+
 Variáveis da Role 
 --------------
 

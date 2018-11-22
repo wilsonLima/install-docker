@@ -18,6 +18,8 @@
 - name: Instalando o Docker Compose
   when: os_default is not defined
   get_url:
-    url: "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-Linux-{{ ansible_architecture }}"
-    dest: /usr/local/bin/docker-compose
-    mode: +x
+   url: "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-Linux-{{ ansible_architecture }}"
+   dest: /usr/local/bin/docker-compose
+   mode: +x
+  tags:
+   - compose
