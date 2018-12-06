@@ -13,6 +13,7 @@ Distribuições Suportadas pela Role
 Tags da Role 
 --------------
 
+- main: Tag a ser utilizada em conjunto com outras tags, se alguma tag for especificada no comando.
 - deps: Instala as dependências do Docker.
 - repo: Insere o repositório do Docker.
 - docker: Realiza a instalação do pacote do Docker.
