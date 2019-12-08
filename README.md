@@ -6,8 +6,8 @@ Role do Ansible para instalação do Docker e Docker Compose em um servidor.
 Distribuições Suportadas pela Role
 ------------
 
-- Debian Jessie ou superior
-- RedHat ou CentOS
+- Debian 9 ou superior
+- RedHat ou CentOS 7 ou inferior
 
 
 Tags da Role 

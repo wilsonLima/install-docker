@@ -1,20 +1,20 @@
 ---
 
-- name: Instalando as dependencias do Docker
+- name: "Instalando as dependencias do Docker"
   yum: 
     name: "{{ dependencias }}"
     state: present
   tags:
     - deps
 
-- name: Adicionando o Repositorio do Docker
+- name: "Adicionando o Repositorio do Docker"
   get_url:
-    url: https://download.docker.com/linux/centos/docker-ce.repo
-    dest: /etc/yum.repos.d/docker-ce.repo
+    url: "https://download.docker.com/linux/centos/docker-ce.repo"
+    dest: "/etc/yum.repos.d/docker-ce.repo"
   tags:
     - repo
 
-- name: Instalando o Docker
+- name: "Instalando o Docker"
   yum:
     name: docker-ce
     state: present
