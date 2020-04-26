@@ -1,2 +1,4 @@
 ---
 # defaults file for install-docker
+
+docker_compose_version: '1.25.5'

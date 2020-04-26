@@ -23,6 +23,8 @@ Tags da Role
 Variáveis da Role 
 --------------
 
+- docker_compose_version: Versão do docker compose a ser instalada. Valor Padrão: '1.25.5'
+
 Exemplos de Playbook
 ----------------
 
